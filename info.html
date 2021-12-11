@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Van Hoan Tran's Information Page</title>
+    <meta charset="utf-8">
+    <link media="screen" rel="stylesheet" href="normalize.css" type="text/css">
+    <script src="info.js"></script>
+</head>
+
+<body>
+    <header class="page-heading">
+        <h1>WEB222 Final Assessment Fall 2021</h1>
+        <p>using Html, Css, JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="honesty.html">Welcome</a>
+        <a href="info.html">Information</a>
+        <a href="reflection.html">Reflection</a>
+    </nav>
+
+    <main>
+    
+        <article class="main-content">
+                <!--Form Start-->
+                <form id="signup" name="signup" method="post" action='https://httpbin.org/post'
+                    onsubmit='return checkForm();'>
+                    <div class="personal-info">
+                        <h3>Personal Information</h3>
+                            <!-- Must start with a cap and only alphabet allowed. -->
+                            <label for="fname">First Name:</label><br>
+                            <input type="text" id="fname" name="firstname" tabindex="1" placeholder="Your name.."
+                                pattern="^[A-Z][A-Za-z]*" title="First letter should be capitalized. e.g. John"
+                                required><br>
+
+                            <!-- Must start with a cap and only alphabet allowed. -->
+                            <label for="lname">Last Name:</label><br>
+                            <input type="text" id="lname" name="lasttname" tabindex="2" placeholder="Your last name.."
+                                pattern="^[A-Z][A-Za-z]*" title="First letter should be capitalized. e.g. Smith"
+                                required><br>
+
+                            <!-- Age: must be in between 18-60. -->
+                            <label for="age">Age:</label><br>
+                            <input type="number" id="age" name="age" tabindex="3" min="18" max="60" required><br>
+
+                            <!-- The value should choose from one of the following: Graduated, Current enrolled, Did not graduate -->
+                            <p>Education Status:</p>
+                            <input type="radio" id="status1" name="status" value="Graduated" tabindex="4" required>
+                            <label for="status1">Graduated</label><br>
+
+                            <input type="radio" id="status2" name="status" value="Current enrolled" tabindex="5"
+                                required>
+                            <label for="status1">Current enrolled</label><br>
+
+                            <input type="radio" id="status3" name="status" value="Did not graduate" tabindex="6"
+                                required>
+                            <label for="status3">Did not graduate</label><br>
+                    </div>
+
+                    <div class="account-info">
+                        <h3>Account Information</h3>
+                        <!--username should start with letter and length should be more than 6-->
+                        <label for="uname">Username:</label><br>
+                        <input type="text" id="uname" name="username" tabindex="7" placeholder="Your username.."
+                            required><br>
+
+                        <!--As we are not allowed to use pattern here, it will be dealt with by JavaScript function-->
+                        <label for="pword">Password:</label><br>
+                        <input id="pword" type="password" name="password" tabindex="8" required><br>
+
+                        <label for="rpword">Password Match:</label><br>
+                        <input id="rpword" type="password" name="repassword" tabindex="9" required><br>
+
+                        <!--This pattern allows email pattern-->
+                        <label for="email">Email:</label><br>
+                        <input id="email" type="email" name="email" tabindex="10" required><br>
+
+                        <!--This is hidden input which having my student info-->
+                        <input type="hidden" name="myLastName" id="myLastName" value="Tran">
+                        <input type="hidden" name="myStudentId" id="myStudentId" value="138415203">
+
+                        <div class="button">
+                            <input type="submit" value="   Submit   " /> &nbsp;&nbsp;
+                            <input type="reset" value="    Clear   " onclick="clearErrors();" />
+                        </div>
+                    </div>
+
+                </form>
+        </article>
+
+        <aside id="aside-right">
+            <header>
+                <h2>More information</h2>
+            </header>
+            <div id="errors"></div>
+        </aside>
+
+
+    </main>
+
+    <footer>
+        <p>Copyright 2021 &copy; Van Hoan Tran <a href="../partB/storefront.html">Visit my Page on GitHub!</a></p>
+    </footer>
+</body>
+
+</html>

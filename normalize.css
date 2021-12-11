@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+/**
+* Style our root elements with some defaults
+*/
+html, body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #fdf9f9;
+    padding: 0;
+    margin: 0 0 2em 0;
+}
+
+/**
+* Page Heading
+*/
+.page-heading {
+    border-radius: .5em;
+    font-family: Verdana, sans-serif;
+    padding: 1em;
+    color: black;    
+    text-align: center;
+    background: linear-gradient(180deg, #5dcc8f 0%, #eaf369 100%);
+}
+
+.page-heading h1 {
+    text-shadow: 2px 2px #c8ff00;
+    font-size: 3em;
+    margin: .3em;
+}
+
+.page-heading p {
+    font-style: italic;
+}
+
+/**
+* Top Navigation
+*/
+nav {
+    border-radius: .5em;
+    font-family: "Raleway", sans-serif;
+    background-color: rgb(129, 128, 128);
+    margin-bottom: 2em;
+    display: flex;
+}
+
+nav a {
+    
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/**
+* Main Blog Content. Don't let it get wider than 1024px
+*/
+main {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    
+}
+
+article {
+    margin: 0.5em;
+    padding: 0em 1em ;
+    flex: 75%;
+}
+
+
+.main-content{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.432);
+    background-size: cover;
+    height: auto;   
+    padding: 1.5em;
+    border-radius: .5em;
+    border: 1px solid rgb(49, 75, 99);
+}
+
+input:invalid {
+    border-color: red;
+}
+input,
+input:valid {
+    border-color: #ccc;
+}
+
+/**
+* Sidebar
+*/
+aside {
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.432);
+    background-size: cover;
+    height: auto;
+    padding: 1.5em;
+    border-radius: .5em;
+    border: 1px solid rgb(49, 75, 99);
+    font-family: "Raleway", sans-serif;
+    
+}
+
+#aside-right{
+    float: right;
+    flex: 25%;
+}
+
+/**
+* Bottom Footer
+*/
+footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    margin: 16px 0px 0px;
+    border-radius: 0.5em;
+    padding: 1px 1px 0px;
+    text-align: center;
+    background: rgb(129, 128, 128);
+    color: black;
+
+    
+}
+
+
+/*
+Information
+*/
+#signup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .5em;
+}
+div.button{
+    margin: 1em 0em;
+    padding: 0em;
+}
+
+
+
+/**
+* Responsive Sizing - remove sidebar when we go below 960px wide
+*/
+@media screen and (max-width: 960px) {
+    article {
+        flex: 100%;
+    }
+
+    aside {
+        display: none;
+    }
+}
+ 
